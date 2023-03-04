@@ -1,23 +1,29 @@
 public class Main {
     public static void main(String[] args) {
+
+        // Счет клинета
+        int clientAccount;
+        clientAccount = 100;
+
         // Пополнение счета
-        int a = 1600;
-        System.out.println("Пополнение счета на:" + (a) + "руб.");
-        // Балл за каждые 100 руб
-        int b = 1;
-        // 1 Балл
-        int c = 100;
+        int replenishment;
+            replenishment = 1350;
 
-        if (a >= 1000) {
-            b = a / c;
-            System.out.println("Ваш бонус:" + (b));
+        System.out.println("Пополнение счета на:" + (replenishment) + "руб.");
+
+        // 1 Балл за каждые 100 руб
+        int bonus;
+        if (replenishment >= 1000) {
+            bonus = replenishment / 100;
+            System.out.println("Ваш бонус:" + bonus + "руб.");
         } else {
-            b = 0;
+            bonus = 0;
         }
+        // Результат
+        int results;
+        results = clientAccount + replenishment + bonus;
 
-        int amount = a + b;
-        System.out.println("Ваш счет:" + amount + "руб.");
-
+        System.out.println("Ваш счет:" + results + "руб.");
     }
 
 }
